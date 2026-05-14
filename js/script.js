@@ -6,30 +6,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const painelSenha = document.getElementById('painelSenha');
     const fundoEscuro = document.getElementById('fundoEscuro');
     
-    
     function abrirPainel(evento) {
         evento.preventDefault(); 
         painelSenha.classList.add('aberto');
         fundoEscuro.classList.add('visivel');
-        
         document.body.style.overflow = 'hidden';
     }
-    
     
     function fecharPainel() {
         painelSenha.classList.remove('aberto');
         fundoEscuro.classList.remove('visivel');
-        
         document.body.style.overflow = 'auto';
     }
-    
     
     botaoEsqueci.addEventListener('click', abrirPainel);
     botaoFechar.addEventListener('click', fecharPainel);
     
-    
     fundoEscuro.addEventListener('click', fecharPainel);
-    
     
     document.getElementById('formularioLogin').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -38,8 +31,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.getElementById('formularioSenha').addEventListener('submit', function(e) {
         e.preventDefault();
-        alert('E-mail de recuperação enviado!');
-        fecharPainel();
+        
+        const email = document.getElementById('emailSenha').value;
+        
+        if (email === 'adm@email.com') {
+            alert('Acesso administrativo detectado. Redirecionando...');
+            window.location.href = 'dashboard.html';
+        } else {
+            alert('Link de recuperação enviado para: ' + email);
+            fecharPainel();
+        }
     });
 
 });

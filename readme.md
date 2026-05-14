@@ -12,7 +12,7 @@
  -Guilherme Ballestrim Sobreira N°06
  -Guilherme  Wallace Carturan Falcão N°08
  -Joao Vitor Alves da Costa N°11
- -John Wayne N°12
+ -John Wayne Gusmão Tavares de Melo N°12
  -Lucas Silva Santos Costa N°17
  -Miguel Rosa Arantes N°21
  <hr>
